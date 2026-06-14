@@ -397,7 +397,7 @@ class BBoxHead(BaseModule):
             # do not perform bounding box regression for BG anymore.
             if pos_inds.any():
                 if self.reg_decoded_bbox:
-                    # When the regression loss (e.g. `IouLoss`,
+                    # When the regression loss (e.g. `IouLoss`
                     # `GIouLoss`, `DIouLoss`) is applied directly on
                     # the decoded bounding boxes, it decodes the
                     # already encoded coordinates to absolute format.
@@ -411,9 +411,23 @@ class BBoxHead(BaseModule):
                         bbox_pred.size(0), self.num_classes,
                         -1)[pos_inds.type(torch.bool),
                             labels[pos_inds.type(torch.bool)]]
+                pos_bbox_targets = bbox_targets[pos_inds.type(torch.bool)]
+
+                # Decode predictions
+                decoded_pred = self.bbox_coder.decode(
+                    rois[pos_inds.type(torch.bool), 1:],
+                    pos_bbox_pred
+                )
+
+                # Decode targets
+                decoded_target = self.bbox_coder.decode(
+                    rois[pos_inds.type(torch.bool), 1:],
+                    pos_bbox_targets
+                )
+
                 losses['loss_bbox'] = self.loss_bbox(
-                    pos_bbox_pred,
-                    bbox_targets[pos_inds.type(torch.bool)],
+                    decoded_pred,
+                    decoded_target,
                     bbox_weights[pos_inds.type(torch.bool)],
                     avg_factor=bbox_targets.size(0),
                     reduction_override=reduction_override)

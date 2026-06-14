@@ -37,11 +37,11 @@ def gen_new_json(coco2017_train_path, json_data, coco2017_train_ids):
 # coco2017 val and final_mixed_train.json have no intersection,
 # so deduplication is not necessary.
 
-# coco2017 val and datasets like refcoco based on coco2014 train
+# coco2017 val and pipeline like refcoco based on coco2014 train
 # have no intersection, so deduplication is not necessary.
 
 
-# coco2017 train and datasets like refcoco based on coco2014
+# coco2017 train and pipeline like refcoco based on coco2014
 # train have overlapping annotations in the validation set,
 # so deduplication is required.
 def exclude_coco(args):

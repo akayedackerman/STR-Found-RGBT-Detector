@@ -1,6 +1,6 @@
 _base_ = [
     '../_base_/models/faster-rcnn_r50_fpn.py',
-    '../_base_/datasets/coco_detection.py',
+    '../_base_/pipeline/coco_detection.py',
     '../_base_/schedules/schedule_1x.py', '../_base_/default_runtime.py'
 ]
 norm_cfg = dict(type='GN', num_groups=32, requires_grad=True)

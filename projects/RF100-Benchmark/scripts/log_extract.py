@@ -31,7 +31,7 @@ def parse_args():
         type=str,
         default=False,
         required=False,
-        help='excel with datasets in the order of execution ')
+        help='excel with pipeline in the order of execution ')
     args = parser.parse_args()
 
     return args
@@ -266,7 +266,7 @@ def main():
     # save fail
     print(f'sum_file = {result_xlsx_sum}')
     ''' generate .txt file '''
-    print(f'{none_exist_num} datasets were not trained:\n{none_exist}\n')
+    print(f'{none_exist_num} pipeline were not trained:\n{none_exist}\n')
     print(f'{fail_num} training failed:\n{fail}\n')
 
     fail_txt = os.path.join(args.work_dirs, 'failed_dataset_list.txt')
@@ -278,7 +278,7 @@ def main():
         for item in fail:
             f.write(f'{item}\n')
 
-    print(f'all {fail_num + none_exist_num} untrained datasets '
+    print(f'all {fail_num + none_exist_num} untrained pipeline '
           f'have been logged in {fail_txt}!')
 
 

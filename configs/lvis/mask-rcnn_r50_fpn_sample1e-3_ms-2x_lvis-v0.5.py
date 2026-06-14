@@ -1,6 +1,6 @@
 _base_ = [
     '../_base_/models/mask-rcnn_r50_fpn.py',
-    '../_base_/datasets/lvis_v0.5_instance.py',
+    '../_base_/pipeline/lvis_v0.5_instance.py',
     '../_base_/schedules/schedule_2x.py', '../_base_/default_runtime.py'
 ]
 model = dict(

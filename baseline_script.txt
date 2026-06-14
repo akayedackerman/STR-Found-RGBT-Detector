@@ -1,0 +1,8 @@
+# Navigate to root
+cd ~/mmdetection
+
+# Clear any cached imports
+find . -name "__pycache__" -delete
+
+# Start training with the PYTHONPATH set to include the current folder
+PYTHONPATH="$(pwd)" python tools/train.py configs/rgbt_tiny/cascade_rcnn_visible.py

@@ -1,6 +1,6 @@
 _base_ = [
     '../_base_/models/faster-rcnn_r50-caffe-c4.py',
-    '../_base_/schedules/schedule_1x.py', '../_base_/datasets/voc0712.py',
+    '../_base_/schedules/schedule_1x.py', '../_base_/pipeline/voc0712.py',
     '../_base_/default_runtime.py'
 ]
 model = dict(roi_head=dict(bbox_head=dict(num_classes=20)))

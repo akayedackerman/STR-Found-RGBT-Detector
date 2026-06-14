@@ -12,7 +12,7 @@ from mmengine.utils.path import mkdir_or_exist
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description='Download datasets for training')
+        description='Download pipeline for training')
     parser.add_argument(
         '--dataset-name', type=str, help='dataset name', default='coco2017')
     parser.add_argument(

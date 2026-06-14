@@ -379,7 +379,7 @@ class MOTChallengeMetric(BaseVideoMetric):
         return metrics[0]
 
     def get_dataset_cfg(self, gt_folder: str, tracker_folder: str):
-        """Get default configs for trackeval.datasets.MotChallenge2DBox.
+        """Get default configs for trackeval.pipeline.MotChallenge2DBox.
 
         Args:
             gt_folder (str): the name of the GT folder

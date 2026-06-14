@@ -1,4 +1,4 @@
-_base_ = ['../_base_/datasets/youtube_vis.py', '../_base_/default_runtime.py']
+_base_ = ['../_base_/pipeline/youtube_vis.py', '../_base_/default_runtime.py']
 
 num_classes = 40
 num_frames = 2

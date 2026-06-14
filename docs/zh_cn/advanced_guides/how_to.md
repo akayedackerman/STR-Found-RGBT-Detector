@@ -11,7 +11,7 @@ MMDet、MMPretrain、MMSeg 中的模型注册表都继承自 MMEngine 中的根�
 ```python
 _base_ = [
     '../_base_/models/retinanet_r50_fpn.py',
-    '../_base_/datasets/coco_detection.py',
+    '../_base_/pipeline/coco_detection.py',
     '../_base_/schedules/schedule_1x.py', '../_base_/default_runtime.py'
 ]
 # please install mmpretrain
@@ -40,7 +40,7 @@ model = dict(
 # https://github.com/open-mmlab/mmdetection/blob/main/configs/timm_example/retinanet_timm_efficientnet_b1_fpn_1x_coco.py
 _base_ = [
     '../_base_/models/retinanet_r50_fpn.py',
-    '../_base_/datasets/coco_detection.py',
+    '../_base_/pipeline/coco_detection.py',
     '../_base_/schedules/schedule_1x.py', '../_base_/default_runtime.py'
 ]
 
@@ -112,7 +112,7 @@ data = dict(
 ```python
 _base_ = [
     '../_base_/models/faster-rcnn_r50_fpn.py',
-    '../_base_/datasets/coco_detection.py',
+    '../_base_/pipeline/coco_detection.py',
     '../_base_/schedules/schedule_1x.py', '../_base_/default_runtime.py'
 ]
 model = dict(

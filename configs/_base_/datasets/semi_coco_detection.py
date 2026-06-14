@@ -6,14 +6,14 @@ data_root = 'data/coco/'
 # Method 1: simply set the data root and let the file I/O module
 # automatically infer from prefix (not support LMDB and Memcache yet)
 
-# data_root = 's3://openmmlab/datasets/detection/coco/'
+# data_root = 's3://openmmlab/pipeline/detection/coco/'
 
 # Method 2: Use `backend_args`, `file_client_args` in versions before 3.0.0rc6
 # backend_args = dict(
 #     backend='petrel',
 #     path_mapping=dict({
-#         './data/': 's3://openmmlab/datasets/detection/',
-#         'data/': 's3://openmmlab/datasets/detection/'
+#         './data/': 's3://openmmlab/pipeline/detection/',
+#         'data/': 's3://openmmlab/pipeline/detection/'
 #     }))
 backend_args = None
 
@@ -111,7 +111,7 @@ test_pipeline = [
 batch_size = 5
 num_workers = 5
 # There are two common semi-supervised learning settings on the coco dataset：
-# (1) Divide the train2017 into labeled and unlabeled datasets
+# (1) Divide the train2017 into labeled and unlabeled pipeline
 # by a fixed percentage, such as 1%, 2%, 5% and 10%.
 # The format of labeled_ann_file and unlabeled_ann_file are
 # instances_train2017.{fold}@{percent}.json, and

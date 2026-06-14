@@ -14,7 +14,7 @@ from ..base_video_dataset import BaseVideoDataset
 
 @DATA_SAMPLERS.register_module()
 class TrackImgSampler(Sampler):
-    """Sampler that providing image-level sampling outputs for video datasets
+    """Sampler that providing image-level sampling outputs for video pipeline
     in tracking tasks. It could be both used in both distributed and
     non-distributed environment.
     If using the default sampler in pytorch, the subsequent data receiver will

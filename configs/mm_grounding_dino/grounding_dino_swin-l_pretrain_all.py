@@ -106,8 +106,8 @@ o365v2_dataset = dict(
 # oi_backend_args = dict(
 #     backend='petrel',
 #     path_mapping=dict({
-#         './data/': 's3://openmmlab/datasets/detection/',
-#         'data/': 's3://openmmlab/datasets/detection/'
+#         './data/': 's3://openmmlab/pipeline/detection/',
+#         'data/': 's3://openmmlab/pipeline/detection/'
 #     }))
 oi_backend_args = None
 

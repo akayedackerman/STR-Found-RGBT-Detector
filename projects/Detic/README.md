@@ -39,7 +39,7 @@ The CLIP embeddings will be loaded to the zero-shot classifier during inference.
 For example, you can download LVIS's class name embeddings with the following command:
 
 ```shell
-wget -P datasets/metadata https://raw.githubusercontent.com/facebookresearch/Detic/main/datasets/metadata/lvis_v1_clip_a%2Bcname.npy
+wget -P pipeline/metadata https://raw.githubusercontent.com/facebookresearch/Detic/main/datasets/metadata/lvis_v1_clip_a%2Bcname.npy
 ```
 
 You can run demo like this:

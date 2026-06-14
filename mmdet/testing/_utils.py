@@ -429,8 +429,8 @@ def replace_to_ceph(cfg):
     backend_args = dict(
         backend='petrel',
         path_mapping=dict({
-            './data/': 's3://openmmlab/datasets/detection/',
-            'data/': 's3://openmmlab/datasets/detection/'
+            './data/': 's3://openmmlab/pipeline/detection/',
+            'data/': 's3://openmmlab/pipeline/detection/'
         }))
 
     # TODO: name is a reserved interface, which will be used later.

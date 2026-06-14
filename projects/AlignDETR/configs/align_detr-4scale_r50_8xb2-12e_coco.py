@@ -1,5 +1,5 @@
 _base_ = [
-    '../../../configs/_base_/datasets/coco_detection.py',
+    '../../../configs/_base_/pipeline/coco_detection.py',
     '../../../configs/_base_/default_runtime.py'
 ]
 custom_imports = dict(

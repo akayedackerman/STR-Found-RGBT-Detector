@@ -17,7 +17,7 @@ To set `FCOSHead` as an `RPNHead` in Faster R-CNN, we should create a new config
 ```python
 _base_ = [
     '../_base_/models/faster-rcnn_r50_fpn.py',
-    '../_base_/datasets/coco_detection.py',
+    '../_base_/pipeline/coco_detection.py',
     '../_base_/schedules/schedule_1x.py', '../_base_/default_runtime.py'
 ]
 
@@ -77,7 +77,7 @@ The quality of proposals is of great importance to the performance of detector, 
 
 ```python
 _base_ = [
-    '../_base_/models/rpn_r50_fpn.py', '../_base_/datasets/coco_detection.py',
+    '../_base_/models/rpn_r50_fpn.py', '../_base_/pipeline/coco_detection.py',
     '../_base_/schedules/schedule_1x.py', '../_base_/default_runtime.py'
 ]
 
@@ -126,7 +126,7 @@ Pre-training not only speeds up convergence of training, but also improves the p
 ```python
 _base_ = [
     '../_base_/models/faster-rcnn_r50_fpn.py',
-    '../_base_/datasets/coco_detection.py',
+    '../_base_/pipeline/coco_detection.py',
     '../_base_/schedules/schedule_1x.py', '../_base_/default_runtime.py'
 ]
 

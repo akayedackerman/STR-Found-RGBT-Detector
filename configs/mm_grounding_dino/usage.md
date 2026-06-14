@@ -242,7 +242,7 @@ If you want to reproduce our results, you can train the model by using the follo
 ```shell
 # Training on a single machine with 8 GPUs for obj365v1 dataset
 ./tools/dist_train.sh configs/mm_grounding_dino/grounding_dino_swin-t_pretrain_obj365.py 8
-# Training on a single machine with 8 GPUs for datasets like obj365v1, goldg, grit, v3det, and other datasets is similar.
+# Training on a single machine with 8 GPUs for pipeline like obj365v1, goldg, grit, v3det, and other pipeline is similar.
 ./tools/dist_train.sh configs/mm_grounding_dino/grounding_dino_swin-t_pretrain_obj365_goldg_grit9m_v3det.py 8
 ```
 

@@ -17,7 +17,7 @@ from mmdet.structures.bbox import get_box_tensor, scale_boxes
 from mmdet.utils import ConfigType, InstanceList
 
 
-def load_class_freq(path='datasets/metadata/lvis_v1_train_cat_info.json',
+def load_class_freq(path='pipeline/metadata/lvis_v1_train_cat_info.json',
                     freq_weight=0.5):
     cat_info = json.load(open(path, 'r'))
     cat_info = torch.tensor(

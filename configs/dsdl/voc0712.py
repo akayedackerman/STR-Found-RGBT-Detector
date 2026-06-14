@@ -2,7 +2,7 @@ _base_ = [
     '../_base_/models/faster-rcnn_r50_fpn.py',
     '../_base_/schedules/schedule_1x.py',
     '../_base_/default_runtime.py',
-    # '../_base_/datasets/dsdl.py'
+    # '../_base_/pipeline/dsdl.py'
 ]
 
 # model setting
@@ -102,7 +102,7 @@ val_evaluator = dict(type='CocoMetric', metric='bbox')
 test_evaluator = val_evaluator
 
 # training schedule, voc dataset is repeated 3 times, in
-# `_base_/datasets/voc0712.py`, so the actual epoch = 4 * 3 = 12
+# `_base_/pipeline/voc0712.py`, so the actual epoch = 4 * 3 = 12
 max_epochs = 4
 train_cfg = dict(
     type='EpochBasedTrainLoop', max_epochs=max_epochs, val_interval=1)

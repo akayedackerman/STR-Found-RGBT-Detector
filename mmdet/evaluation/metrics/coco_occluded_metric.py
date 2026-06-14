@@ -29,7 +29,7 @@ class CocoOccludedSeparatedMetric(CocoMetric):
     - Partial Occlusion: target object is partially occluded but the
       segmentation mask is connected.
 
-    These two new scalable real-image datasets are to benchmark a model's
+    These two new scalable real-image pipeline are to benchmark a model's
     capability to detect occluded objects of 80 common categories.
 
     Please cite the paper if you use this dataset:

@@ -1,11 +1,11 @@
 _base_ = [
-    '../_base_/models/faster-rcnn_r50_fpn.py', '../_base_/datasets/voc0712.py',
+    '../_base_/models/faster-rcnn_r50_fpn.py', '../_base_/pipeline/voc0712.py',
     '../_base_/default_runtime.py'
 ]
 model = dict(roi_head=dict(bbox_head=dict(num_classes=20)))
 
 # training schedule, voc dataset is repeated 3 times, in
-# `_base_/datasets/voc0712.py`, so the actual epoch = 4 * 3 = 12
+# `_base_/pipeline/voc0712.py`, so the actual epoch = 4 * 3 = 12
 max_epochs = 4
 train_cfg = dict(
     type='EpochBasedTrainLoop', max_epochs=max_epochs, val_interval=1)

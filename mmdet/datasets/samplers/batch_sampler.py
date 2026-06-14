@@ -120,13 +120,13 @@ class TrackAspectRatioBatchSampler(AspectRatioBatchSampler):
 class MultiDataAspectRatioBatchSampler(BatchSampler):
     """A sampler wrapper for grouping images with similar aspect ratio (< 1 or.
 
-    >= 1) into a same batch for multi-source datasets.
+    >= 1) into a same batch for multi-source pipeline.
 
     Args:
         sampler (Sampler): Base sampler.
         batch_size (Sequence(int)): Size of mini-batch for multi-source
-        datasets.
-        num_datasets(int): Number of multi-source datasets.
+        pipeline.
+        num_datasets(int): Number of multi-source pipeline.
         drop_last (bool): If ``True``, the sampler will drop the last batch if
         its size would be less than ``batch_size``.
     """

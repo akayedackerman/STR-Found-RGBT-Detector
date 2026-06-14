@@ -24,8 +24,8 @@ def _parse_label_file(label_file):
 # backend_args = dict(
 #     backend='petrel',
 #     path_mapping=dict({
-#         './data/': 's3://openmmlab/datasets/detection/',
-#         'data/': 's3://openmmlab/datasets/detection/'
+#         './data/': 's3://openmmlab/pipeline/detection/',
+#         'data/': 's3://openmmlab/pipeline/detection/'
 #     }))
 backend_args = None
 

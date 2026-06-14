@@ -246,7 +246,7 @@ def autocast_box_type(dst_box_type='hbox') -> Callable:
     """A decorator which automatically casts results['gt_bboxes'] to the
     destination box type.
 
-    It commenly used in mmdet.datasets.transforms to make the transforms up-
+    It commenly used in mmdet.pipeline.transforms to make the transforms up-
     compatible with the np.ndarray type of results['gt_bboxes'].
 
     The speed of processing of np.ndarray and BaseBoxes data are the same:

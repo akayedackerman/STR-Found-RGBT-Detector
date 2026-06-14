@@ -11,7 +11,7 @@ def parse_args():
         action='store_true',
         help='to train models in basic arch')
     parser.add_argument(
-        '--datasets', action='store_true', help='to train models in dataset')
+        '--pipeline', action='store_true', help='to train models in dataset')
     parser.add_argument(
         '--data-pipeline',
         action='store_true',

@@ -6,14 +6,14 @@ data_root = 'data/ADEChallengeData2016/'
 # Method 1: simply set the data root and let the file I/O module
 # automatically infer from prefix (not support LMDB and Memcache yet)
 
-# data_root = 's3://openmmlab/datasets/detection/ADEChallengeData2016/'
+# data_root = 's3://openmmlab/pipeline/detection/ADEChallengeData2016/'
 
 # Method 2: Use `backend_args`, `file_client_args` in versions before 3.0.0rc6
 # backend_args = dict(
 #     backend='petrel',
 #     path_mapping=dict({
-#         './data/': 's3://openmmlab/datasets/detection/',
-#         'data/': 's3://openmmlab/datasets/detection/'
+#         './data/': 's3://openmmlab/pipeline/detection/',
+#         'data/': 's3://openmmlab/pipeline/detection/'
 #     }))
 backend_args = None
 

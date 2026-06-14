@@ -240,7 +240,7 @@ class LoadAnnotations(MMCV_LoadAnnotations):
         box_type (str): The box type used to wrap the bboxes. If ``box_type``
             is None, gt_bboxes will keep being np.ndarray. Defaults to 'hbox'.
         reduce_zero_label (bool): Whether reduce all label value
-            by 1. Usually used for datasets where 0 is background label.
+            by 1. Usually used for pipeline where 0 is background label.
             Defaults to False.
         ignore_index (int): The label index to be ignored.
             Valid only if reduce_zero_label is true. Defaults is 255.
@@ -1015,7 +1015,7 @@ class LoadTrackAnnotations(LoadAnnotations):
         gt_ignore_flags = []
         # TODO: use bbox_type
         for instance in results['instances']:
-            # The datasets which are only format in evaluation don't have
+            # The pipeline which are only format in evaluation don't have
             # groundtruth boxes.
             if 'bbox' in instance:
                 gt_bboxes.append(instance['bbox'])

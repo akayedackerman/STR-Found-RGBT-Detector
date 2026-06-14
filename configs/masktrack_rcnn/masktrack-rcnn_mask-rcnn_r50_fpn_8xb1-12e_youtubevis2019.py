@@ -1,6 +1,6 @@
 _base_ = [
     '../_base_/models/mask-rcnn_r50_fpn.py',
-    '../_base_/datasets/youtube_vis.py', '../_base_/default_runtime.py'
+    '../_base_/pipeline/youtube_vis.py', '../_base_/default_runtime.py'
 ]
 
 detector = _base_.model

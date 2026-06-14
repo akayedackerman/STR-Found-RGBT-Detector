@@ -1,5 +1,5 @@
 _base_ = [
-    '../_base_/datasets/coco_instance.py', '../_base_/default_runtime.py'
+    '../_base_/pipeline/coco_instance.py', '../_base_/default_runtime.py'
 ]
 img_norm_cfg = dict(
     mean=[123.68, 116.78, 103.94], std=[58.40, 57.12, 57.38], to_rgb=True)

@@ -1,6 +1,6 @@
 _base_ = [
     '_base_/xdecoder-tiny_open-vocab-semseg.py',
-    'mmdet::_base_/datasets/ade20k_semantic.py'
+    'mmdet::_base_/pipeline/ade20k_semantic.py'
 ]
 
 test_pipeline = [

@@ -11,7 +11,7 @@ Suppose you want to use `MobileNetV3-small` as the backbone network of `RetinaNe
 ```python
 _base_ = [
     '../_base_/models/retinanet_r50_fpn.py',
-    '../_base_/datasets/coco_detection.py',
+    '../_base_/pipeline/coco_detection.py',
     '../_base_/schedules/schedule_1x.py', '../_base_/default_runtime.py'
 ]
 # please install mmpretrain
@@ -41,7 +41,7 @@ MMPretrain also provides a wrapper for the PyTorch Image Models (timm) backbone 
 
 _base_ = [
     '../_base_/models/retinanet_r50_fpn.py',
-    '../_base_/datasets/coco_detection.py',
+    '../_base_/pipeline/coco_detection.py',
     '../_base_/schedules/schedule_1x.py', '../_base_/default_runtime.py'
 ]
 
@@ -113,7 +113,7 @@ If you have freezed the backbone network in the config and want to unfreeze it a
 ```python
 _base_ = [
     '../_base_/models/faster-rcnn_r50_fpn.py',
-    '../_base_/datasets/coco_detection.py',
+    '../_base_/pipeline/coco_detection.py',
     '../_base_/schedules/schedule_1x.py', '../_base_/default_runtime.py'
 ]
 model = dict(

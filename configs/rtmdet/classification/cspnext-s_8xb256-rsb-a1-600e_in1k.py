@@ -1,5 +1,5 @@
 _base_ = [
-    'mmpretrain::_base_/datasets/imagenet_bs256_rsb_a12.py',
+    'mmpretrain::_base_/pipeline/imagenet_bs256_rsb_a12.py',
     'mmpretrain::_base_/schedules/imagenet_bs2048_rsb.py',
     'mmpretrain::_base_/default_runtime.py'
 ]

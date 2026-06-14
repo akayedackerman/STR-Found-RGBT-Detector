@@ -229,7 +229,7 @@ Finally, parameters required for semi-supervised training and testing can be con
 ```python
 _base_ = [
     '../_base_/models/faster-rcnn_r50_fpn.py', '../_base_/default_runtime.py',
-    '../_base_/datasets/semi_coco_detection.py'
+    '../_base_/pipeline/semi_coco_detection.py'
 ]
 
 detector = _base_.model
@@ -278,7 +278,7 @@ In addition, we also support semi-supervised training for other detection models
 ```python
 _base_ = [
     '../_base_/models/retinanet_r50_fpn.py', '../_base_/default_runtime.py',
-    '../_base_/datasets/semi_coco_detection.py'
+    '../_base_/pipeline/semi_coco_detection.py'
 ]
 
 detector = _base_.model

@@ -13,16 +13,16 @@ class TestSetupEnv(TestCase):
         from mmdet.registry import DATASETS
 
         # not init default scope
-        sys.modules.pop('mmdet.datasets', None)
-        sys.modules.pop('mmdet.datasets.coco', None)
+        sys.modules.pop('mmdet.pipeline', None)
+        sys.modules.pop('mmdet.pipeline.coco', None)
         DATASETS._module_dict.pop('CocoDataset', None)
         self.assertFalse('CocoDataset' in DATASETS.module_dict)
         register_all_modules(init_default_scope=False)
         self.assertTrue('CocoDataset' in DATASETS.module_dict)
 
         # init default scope
-        sys.modules.pop('mmdet.datasets')
-        sys.modules.pop('mmdet.datasets.coco')
+        sys.modules.pop('mmdet.pipeline')
+        sys.modules.pop('mmdet.pipeline.coco')
         DATASETS._module_dict.pop('CocoDataset', None)
         self.assertFalse('CocoDataset' in DATASETS.module_dict)
         register_all_modules(init_default_scope=True)

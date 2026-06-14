@@ -1,5 +1,5 @@
 _base_ = [
-    '../_base_/datasets/v3det.py', '../_base_/schedules/schedule_2x.py',
+    '../_base_/pipeline/v3det.py', '../_base_/schedules/schedule_2x.py',
     '../_base_/default_runtime.py'
 ]
 # model settings

@@ -30,7 +30,7 @@ class MultiDataSampler(Sampler):
 
     Args:
         dataset (Sized): The dataset.
-        dataset_ratio (Sequence(int)) The ratios of different datasets.
+        dataset_ratio (Sequence(int)) The ratios of different pipeline.
         seed (int, optional): Random seed used to shuffle the sampler if
             :attr:`shuffle=True`. This number should be identical across all
             processes in the distributed group. Defaults to None.

@@ -94,7 +94,7 @@ TODO
 ## Citation
 
 ```latex
-@article{vision-datasets,
+@article{vision-pipeline,
   title         = {VISION Datasets: A Benchmark for Vision-based InduStrial InspectiON},
   author        = {Haoping Bai, Shancong Mou, Tatiana Likhomanenko, Ramazan Gokberk Cinbis, Oncel Tuzel, Ping Huang, Jiulong Shan, Jianjun Shi, Meng Cao},
   journal       = {arXiv preprint arXiv:2306.07890},

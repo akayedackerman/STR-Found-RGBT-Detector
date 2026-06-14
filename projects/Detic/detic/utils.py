@@ -9,10 +9,10 @@ from .text_encoder import CLIPTextEncoder
 # download from
 # https://github.com/facebookresearch/Detic/tree/main/datasets/metadata
 DATASET_EMBEDDINGS = {
-    'lvis': 'datasets/metadata/lvis_v1_clip_a+cname.npy',
-    'objects365': 'datasets/metadata/o365_clip_a+cnamefix.npy',
-    'openimages': 'datasets/metadata/oid_clip_a+cname.npy',
-    'coco': 'datasets/metadata/coco_clip_a+cname.npy',
+    'lvis': 'pipeline/metadata/lvis_v1_clip_a+cname.npy',
+    'objects365': 'pipeline/metadata/o365_clip_a+cnamefix.npy',
+    'openimages': 'pipeline/metadata/oid_clip_a+cname.npy',
+    'coco': 'pipeline/metadata/coco_clip_a+cname.npy',
 }
 
 

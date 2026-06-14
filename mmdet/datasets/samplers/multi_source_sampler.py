@@ -16,13 +16,13 @@ class MultiSourceSampler(Sampler):
     r"""Multi-Source Infinite Sampler.
 
     According to the sampling ratio, sample data from different
-    datasets to form batches.
+    pipeline to form batches.
 
     Args:
         dataset (Sized): The dataset.
         batch_size (int): Size of mini-batch.
         source_ratio (list[int | float]): The sampling ratio of different
-            source datasets in a mini-batch.
+            source pipeline in a mini-batch.
         shuffle (bool): Whether shuffle the dataset or not. Defaults to True.
         seed (int, optional): Random seed. If None, set a random seed.
             Defaults to None.
@@ -35,7 +35,7 @@ class MultiSourceSampler(Sampler):
         >>> unsup_ann = '../coco_semi_annos/' \
         >>>             'instances_train2017.1@10-unlabeled.json'
         >>> dataset = dict(type=dataset_type,
-        >>>     datasets=[
+        >>>     pipeline=[
         >>>         dict(
         >>>             type=sub_dataset_type,
         >>>             data_root=data_root,
@@ -77,7 +77,7 @@ class MultiSourceSampler(Sampler):
             f'source_ratio must be a list, but got source_ratio={source_ratio}'
         assert len(source_ratio) == len(dataset.cumulative_sizes), \
             'The length of source_ratio must be equal to ' \
-            f'the number of datasets, but got source_ratio={source_ratio}'
+            f'the number of pipeline, but got source_ratio={source_ratio}'
 
         rank, world_size = get_dist_info()
         self.rank = rank
@@ -147,13 +147,13 @@ class GroupMultiSourceSampler(MultiSourceSampler):
     r"""Group Multi-Source Infinite Sampler.
 
     According to the sampling ratio, sample data from different
-    datasets but the same group to form batches.
+    pipeline but the same group to form batches.
 
     Args:
         dataset (Sized): The dataset.
         batch_size (int): Size of mini-batch.
         source_ratio (list[int | float]): The sampling ratio of different
-            source datasets in a mini-batch.
+            source pipeline in a mini-batch.
         shuffle (bool): Whether shuffle the dataset or not. Defaults to True.
         seed (int, optional): Random seed. If None, set a random seed.
             Defaults to None.

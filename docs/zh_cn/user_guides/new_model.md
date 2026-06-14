@@ -125,7 +125,7 @@ neck=dict(
 # 继承 base 配置，然后进行针对性修改
 _base_ = [
     '../_base_/models/cascade-mask-rcnn_r50_fpn.py',
-    '../_base_/datasets/cityscapes_instance.py', '../_base_/default_runtime.py'
+    '../_base_/pipeline/cityscapes_instance.py', '../_base_/default_runtime.py'
 ]
 
 model = dict(

@@ -1,7 +1,7 @@
 _base_ = [
     '../_base_/models/faster-rcnn_r50_fpn.py',
     '../_base_/schedules/schedule_1x.py', '../_base_/default_runtime.py',
-    '../_base_/datasets/dsdl.py'
+    '../_base_/pipeline/dsdl.py'
 ]
 
 model = dict(roi_head=dict(bbox_head=dict(num_classes=365)))

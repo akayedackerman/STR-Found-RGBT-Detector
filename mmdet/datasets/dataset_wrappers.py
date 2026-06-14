@@ -66,7 +66,7 @@ class MultiImageMixDataset:
             self.dataset = dataset
         else:
             raise TypeError(
-                'elements in datasets sequence should be config or '
+                'elements in pipeline sequence should be config or '
                 f'`BaseDataset` instance, but got {type(dataset)}')
 
         self._metainfo = self.dataset.metainfo
@@ -105,7 +105,7 @@ class MultiImageMixDataset:
             idx (int): Global index of ``ConcatDataset``.
 
         Returns:
-            dict: The idx-th annotation of the datasets.
+            dict: The idx-th annotation of the pipeline.
         """
         return self.dataset.get_data_info(idx)
 
@@ -186,7 +186,7 @@ class ConcatDataset(MMENGINE_ConcatDataset):
         arguments for wrapped dataset which inherit from ``BaseDataset``.
 
     Args:
-        datasets (Sequence[BaseDataset] or Sequence[dict]): A list of datasets
+        datasets (Sequence[BaseDataset] or Sequence[dict]): A list of pipeline
             which will be concatenated.
         lazy_init (bool, optional): Whether to load annotation during
             instantiation. Defaults to False.
@@ -207,7 +207,7 @@ class ConcatDataset(MMENGINE_ConcatDataset):
                 self.datasets.append(dataset)
             else:
                 raise TypeError(
-                    'elements in datasets sequence should be config or '
+                    'elements in pipeline sequence should be config or '
                     f'`BaseDataset` instance, but got {type(dataset)}')
         if ignore_keys is None:
             self.ignore_keys = []
@@ -222,9 +222,9 @@ class ConcatDataset(MMENGINE_ConcatDataset):
         meta_keys: set = set()
         for dataset in self.datasets:
             meta_keys |= dataset.metainfo.keys()
-        # if the metainfo of multiple datasets are the same, use metainfo
+        # if the metainfo of multiple pipeline are the same, use metainfo
         # of the first dataset, else the metainfo is a list with metainfo
-        # of all the datasets
+        # of all the pipeline
         is_all_same = True
         self._metainfo_first = self.datasets[0].metainfo
         for i, dataset in enumerate(self.datasets, 1):

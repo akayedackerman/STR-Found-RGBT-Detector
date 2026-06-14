@@ -127,7 +127,7 @@ The third step is to prepare a config for your own training setting. Assume that
 # The new config inherits the base configs to highlight the necessary modification
 _base_ = [
     '../_base_/models/cascade-mask-rcnn_r50_fpn.py',
-    '../_base_/datasets/cityscapes_instance.py', '../_base_/default_runtime.py'
+    '../_base_/pipeline/cityscapes_instance.py', '../_base_/default_runtime.py'
 ]
 
 model = dict(

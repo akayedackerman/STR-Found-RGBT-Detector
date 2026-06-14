@@ -64,7 +64,7 @@ val_evaluator = dict(type='VOCMetric', metric='mAP', eval_mode='11points')
 test_evaluator = val_evaluator
 
 # training schedule, voc dataset is repeated 3 times, in
-# `_base_/datasets/voc0712.py`, so the actual epoch = 4 * 3 = 12
+# `_base_/pipeline/voc0712.py`, so the actual epoch = 4 * 3 = 12
 max_epochs = 12
 train_cfg = dict(
     type='EpochBasedTrainLoop', max_epochs=max_epochs, val_interval=3)

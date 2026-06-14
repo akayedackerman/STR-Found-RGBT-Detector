@@ -17,8 +17,8 @@ from mmdet.visualization.palette import _get_adaptive_scales
 # backend_args = dict(
 #     backend='petrel',
 #     path_mapping=dict({
-#         './data/': 's3://openmmlab/datasets/detection/',
-#         'data/': 's3://openmmlab/datasets/detection/'
+#         './data/': 's3://openmmlab/pipeline/detection/',
+#         'data/': 's3://openmmlab/pipeline/detection/'
 #     }))
 backend_args = None
 

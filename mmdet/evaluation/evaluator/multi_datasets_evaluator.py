@@ -25,7 +25,7 @@ class MultiDatasetsEvaluator(Evaluator):
         metrics (dict or BaseMetric or Sequence): The config of metrics.
         dataset_prefixes (Sequence[str]): The prefix of each dataset. The
             length of this sequence should be the same as the length of the
-            datasets.
+            pipeline.
     """
 
     def __init__(self, metrics: Union[ConfigType, BaseMetric, Sequence],

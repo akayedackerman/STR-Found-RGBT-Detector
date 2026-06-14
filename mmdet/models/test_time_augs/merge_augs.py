@@ -25,7 +25,7 @@ def merge_aug_proposals(aug_proposals, img_metas, cfg):
             'img_shape', 'scale_factor', 'flip', and may also contain
             'filename', 'ori_shape', 'pad_shape', and 'img_norm_cfg'.
             For details on the values of these keys see
-            `mmdet/datasets/pipelines/formatting.py:Collect`.
+            `mmdet/pipeline/pipelines/formatting.py:Collect`.
 
         cfg (dict): rpn test config.
 

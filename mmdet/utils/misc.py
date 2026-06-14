@@ -103,7 +103,7 @@ def get_test_pipeline_cfg(cfg: Union[str, ConfigDict]) -> ConfigDict:
         elif 'dataset' in dataset_cfg:
             return _get_test_pipeline_cfg(dataset_cfg.dataset)
         # handle dataset wrappers like ConcatDataset
-        elif 'datasets' in dataset_cfg:
+        elif 'pipeline' in dataset_cfg:
             return _get_test_pipeline_cfg(dataset_cfg.datasets[0])
 
         raise RuntimeError('Cannot find `pipeline` in `test_dataloader`')

@@ -556,7 +556,7 @@ def eval_map(det_results,
         ioa_thr (float | None): IoA threshold to be considered as matched,
             which only used in OpenImages evaluation. Defaults to None.
         dataset (list[str] | str | None): Dataset name or dataset classes,
-            there are minor differences in metrics for different datasets, e.g.
+            there are minor differences in metrics for different pipeline, e.g.
             "voc", "imagenet_det", etc. Defaults to None.
         logger (logging.Logger | str | None): The way to print the mAP
             summary. See `mmengine.logging.print_log()` for details.
@@ -610,7 +610,7 @@ def eval_map(det_results,
         # get gt and det bboxes of this class
         cls_dets, cls_gts, cls_gts_ignore = get_cls_results(
             det_results, annotations, i)
-        # choose proper function according to datasets to compute tp and fp
+        # choose proper function according to pipeline to compute tp and fp
         if tpfp_fn is None:
             if dataset in ['det', 'vid']:
                 tpfp_fn = tpfp_imagenet

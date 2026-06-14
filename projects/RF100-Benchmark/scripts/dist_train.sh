@@ -9,7 +9,7 @@ NODE_RANK=${NODE_RANK:-0}
 PORT=${PORT:-29500}
 MASTER_ADDR=${MASTER_ADDR:-"127.0.0.1"}
 
-datasets=$(pwd)/rf100
+pipeline=$(pwd)/rf100
 export PYTHONPATH="../..":$PYTHONPATH
 
 DEBUG=0
@@ -35,7 +35,7 @@ echo "=============================================="
 
 for dataset in $(ls $datasets)
   do
-    # You can customize string_list to train only specific datasets.
+    # You can customize string_list to train only specific pipeline.
     if [ "$DEBUG" == 1 ]; then
       if [[ ! " ${datasets_list[@]} " =~ "$dataset" ]]; then
         continue

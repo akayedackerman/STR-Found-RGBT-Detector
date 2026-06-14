@@ -1,6 +1,6 @@
 _base_ = [
     '_base_/xdecoder-tiny_open-vocab-panoptic.py',
-    'mmdet::_base_/datasets/ade20k_panoptic.py'
+    'mmdet::_base_/pipeline/ade20k_panoptic.py'
 ]
 
 model = dict(test_cfg=dict(mask_thr=0.4))

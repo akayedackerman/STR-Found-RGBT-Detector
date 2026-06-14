@@ -18,7 +18,7 @@ To release the burden and reduce bugs in writing the whole configs, MMDetection 
 ```python
 _base_ = [
     '../_base_/models/mask-rcnn_r50_fpn.py',
-    '../_base_/datasets/cityscapes_instance.py', '../_base_/default_runtime.py',
+    '../_base_/pipeline/cityscapes_instance.py', '../_base_/default_runtime.py',
     '../_base_/schedules/schedule_1x.py'
 ]
 ```
